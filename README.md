@@ -2,4 +2,5 @@
 
 ### Desafios. 🙂
 
-- [x] Criação de um repositório no GitHub 😉
+- ✅ Criação de um repositório no GitHub 😉
+- ✅ Desenvolvimento do jogo [Genius](https://github.com/marcusWittho/dio-genius)
