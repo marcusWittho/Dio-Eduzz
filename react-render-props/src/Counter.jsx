@@ -1,42 +1,27 @@
 import React from 'react';
 
-class Counter extends React.Component {
-  constructor(props) {
-    super(props);
+function Counter(props) {
+  const [count, setCount] = React.useState(0);
 
-    this.state = {
-      count: 0,
-    }
+  const increment = () => {
+    setCount(count + 1)
   }
 
-  increment = () => {
-    this.setState({
-      count: this.state.count + 1
-    })
+  const decrement = () => {
+    setCount(count - 1)
   }
 
-  decrement = () => {
-    this.setState({
-      count: this.state.count - 1
-    })
-  }
-
-  render() {
-    const { render } = this.props;
-    const { count } = this.state;
-
-    return(
-      <>
-        {
-          render({
-            increment: this.increment,
-            decrement: this.decrement,
-            count,
-          })
-        }
-      </>
-    )
-  }
+  return(
+    <>
+      {
+        props.render({
+          increment,
+          decrement,
+          count,
+        })
+      }
+    </>
+  )
 }
 
 export default Counter;

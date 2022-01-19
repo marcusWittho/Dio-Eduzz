@@ -10,21 +10,18 @@ const Buttons = ({ increment, decrement, count }) => (
   </>
 );
 
-class App extends React.Component {
-  render() {
-    return (
-      <>
-        <Counter render={({ increment, decrement, count }) => (
-          <Buttons
-            increment={increment}
-            decrement={decrement}
-            count={count}
-          />
-        )}
+function App() {
+  return (
+    <>
+      <Counter render={({ increment, decrement, count }) => (
+        <Buttons
+          increment={increment}
+          decrement={decrement}
+          count={count}
         />
-      </>
-    )
-  }
+      )} />
+    </>
+  )
 }
 
 export default App;
